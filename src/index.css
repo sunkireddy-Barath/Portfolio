@@ -1,0 +1,214 @@
+/* ── Fonts loaded via index.html <link> ── */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  /* ── Colors ── */
+  --bg:      #000003;
+  --bg2:     #030305;
+  --bg3:     #060608;
+  --surface: rgba(255,255,255,0.038);
+  --border:  rgba(255,255,255,0.075);
+  --bh:      rgba(0,245,255,0.22);
+  --text:    #eceef5;
+  --text2:   #c8cbda;
+  --muted:   #787b8e;
+  --dim:     #454857;
+  --cyan:    #00f5ff;
+  --magenta: #e040fb;
+  --green:   #00e676;
+  --gold:    #ffd740;
+  --orange:  #ff9100;
+  --red:     #ff1744;
+
+  /* ── Typography ── */
+  --font-body:    'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-display: 'Syne', sans-serif;
+  --font-mono:    'JetBrains Mono', 'Fira Code', monospace;
+
+  /* ── Radii ── */
+  --r:   20px;
+  --rs:  14px;
+  --rss: 8px;
+}
+
+/* ── Base ── */
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  cursor: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar       { width: 3px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: linear-gradient(var(--cyan), var(--magenta)); border-radius: 2px; }
+
+/* ── Selection ── */
+::selection { background: rgba(0,245,255,0.15); color: var(--cyan); }
+
+/* ── Inputs inherit font ── */
+input, textarea, button, select { font-family: var(--font-body); }
+input::placeholder, textarea::placeholder { color: var(--dim); font-weight: 400; }
+
+/* ── Global type ── */
+h1, h2, h3, h4, h5 { font-family: var(--font-display); font-weight: 800; line-height: 1.1; letter-spacing: -0.03em; }
+p { line-height: 1.72; }
+
+/* ── Glass card ── */
+.glass {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  backdrop-filter: blur(28px) saturate(160%);
+  -webkit-backdrop-filter: blur(28px) saturate(160%);
+  transition: border-color 0.3s ease, box-shadow 0.35s ease, transform 0.35s ease;
+}
+.glass:hover {
+  border-color: rgba(0,245,255,0.17);
+  box-shadow: 0 24px 70px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.06);
+}
+
+/* ── Tag pills ── */
+.tag {
+  display: inline-block;
+  padding: .26rem .72rem;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 100px;
+  font-size: .74rem;
+  font-weight: 600;
+  letter-spacing: .015em;
+  color: var(--muted);
+  transition: all .2s ease;
+  font-family: var(--font-body);
+}
+.tag:hover {
+  border-color: rgba(0,245,255,.32);
+  color: var(--cyan);
+  background: rgba(0,245,255,.07);
+  transform: translateY(-1px);
+}
+
+/* ── Layout ── */
+.section     { padding: 7rem 0; position: relative; z-index: 1; }
+.section-alt { background: transparent; }
+.container   { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+
+/* ── Section header ── */
+.sec-tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: .68rem; font-weight: 500;
+  color: var(--cyan); letter-spacing: .32em; text-transform: uppercase;
+  padding: .25rem .9rem;
+  border: 1px solid rgba(0,245,255,.2);
+  border-radius: 100px;
+  background: rgba(0,245,255,.05);
+  margin-bottom: 1rem;
+}
+
+.sec-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4.5vw, 3.25rem);
+  font-weight: 800;
+  letter-spacing: -.04em;
+  line-height: 1.08;
+  margin-bottom: 1rem;
+  background: linear-gradient(160deg, #ffffff 0%, rgba(255,255,255,.5) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.sec-sub {
+  color: var(--muted);
+  font-size: .95rem;
+  font-weight: 400;
+  line-height: 1.7;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.sec-header { text-align: center; margin-bottom: 4rem; }
+
+/* ── Gradient text ── */
+.grad {
+  background: linear-gradient(135deg, var(--cyan) 0%, var(--magenta) 52%, var(--orange) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Buttons ── */
+.btn-primary {
+  display: inline-flex; align-items: center; gap: .5rem;
+  padding: .82rem 1.65rem;
+  background: linear-gradient(135deg, var(--cyan), #0077ff);
+  color: #000; font-weight: 700; font-size: .88rem;
+  letter-spacing: .01em;
+  border-radius: 11px; text-decoration: none; border: none; cursor: none;
+  transition: transform .25s, box-shadow .3s;
+  font-family: var(--font-body);
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 44px rgba(0,245,255,.36);
+}
+
+.btn-outline {
+  display: inline-flex; align-items: center; gap: .5rem;
+  padding: .82rem 1.65rem;
+  border: 1px solid rgba(255,255,255,.13);
+  color: var(--text2); font-weight: 600; font-size: .88rem;
+  letter-spacing: .01em;
+  border-radius: 11px; text-decoration: none;
+  background: rgba(255,255,255,.04);
+  transition: all .25s; cursor: none;
+  font-family: var(--font-body);
+}
+.btn-outline:hover {
+  border-color: var(--cyan);
+  color: var(--cyan);
+  background: rgba(0,245,255,.07);
+  transform: translateY(-2px);
+}
+
+/* ── Custom cursor ── */
+#cursor, #cursor-f {
+  position: fixed; border-radius: 50%; pointer-events: none; z-index: 9999;
+  transform: translate(-50%,-50%);
+}
+#cursor   { width: 10px; height: 10px; background: var(--cyan); mix-blend-mode: difference; transition: transform .12s; }
+#cursor-f { width: 38px; height: 38px; border: 1px solid rgba(0,245,255,.32); transition: opacity .2s; }
+
+/* ── Keyframes ── */
+@keyframes blink    { 0%,100%{opacity:1} 50%{opacity:0} }
+@keyframes floatY   { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+@keyframes spinSlow { to{transform:rotate(360deg)} }
+@keyframes shimmer  { from{background-position:-200% 0} to{background-position:200% 0} }
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  body { cursor: auto; }
+  #cursor, #cursor-f { display: none; }
+  .section    { padding: 5rem 0; }
+  .container  { padding: 0 1.25rem; }
+  .sec-title  { font-size: 1.8rem; letter-spacing: -.025em; }
+  .sec-sub    { font-size: .9rem; }
+}
+@media (max-width: 480px) {
+  .section  { padding: 4rem 0; }
+  .sec-title { font-size: 1.55rem; }
+}
