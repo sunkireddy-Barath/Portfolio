@@ -16,7 +16,7 @@ export const STATS = [
 
 export const LINKS = {
   github:   'https://github.com/sunkireddy-Barath',
-  linkedin: 'https://www.linkedin.com/in/sunkireddy-barath/',
+  linkedin: 'https://www.linkedin.com/in/barath-sunkireddy-71b071340/',
   email:    'sunkireddybarath07@gmail.com',
   phone:    '+91 8438784178',
   location: 'Chennai, Tamil Nadu, India',
