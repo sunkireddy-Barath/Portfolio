@@ -32,8 +32,8 @@ function TotalPrize() {
         { val:'$4,500+', label:'Total Prize Money', color:'var(--green)' },
         { val:'3000+', label:'Teams Defeated', color:'var(--cyan)' },
       ].map(item => (
-        <div key={item.label} style={{ textAlign:'center' }}>
-          <div style={{ fontFamily:'Syne,sans-serif',fontSize:'1.6rem',fontWeight:800,color:item.color }}>{item.val}</div>
+        <div key={item.label} style={{ textAlign:'center', fontFamily:'Arial, sans-serif' }}>
+          <div style={{ fontSize:'1.6rem',fontWeight:800,color:item.color }}>{item.val}</div>
           <div style={{ fontSize:'.72rem',color:'var(--muted)',letterSpacing:'.06em',textTransform:'uppercase' }}>{item.label}</div>
         </div>
       ))}
@@ -138,8 +138,8 @@ export default function Achievements() {
 
                 <div style={{ display:'flex',gap:'1rem',flexWrap:'wrap',marginBottom:'1rem' }}>
                   {cp.stats.map(s=>(
-                    <div key={s.key}>
-                      <div style={{ fontFamily:'Syne,sans-serif',fontSize:'1.15rem',fontWeight:800,color:'white' }}>
+                    <div key={s.key} style={{ fontFamily:'Arial, sans-serif' }}>
+                      <div style={{ fontSize:'1.15rem',fontWeight:800,color:'white' }}>
                         <Counter val={s.val} suffix={s.suffix}/>
                       </div>
                       <div style={{ fontSize:'.65rem',color:'var(--muted)',lineHeight:1.3 }}>{s.key}</div>

@@ -1,6 +1,6 @@
 /* ── Fonts loaded via index.html <link> ── */
 
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif !important; }
 
 :root {
   /* ── Colors ── */
@@ -24,7 +24,7 @@
   /* ── Typography ── */
   --font-body:    'Arial', 'Helvetica Neue', Helvetica, sans-serif;
   --font-display: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
-  --font-mono:    'JetBrains Mono', 'Fira Code', monospace;
+  --font-mono:    'Arial', 'Helvetica Neue', Helvetica, sans-serif;
 
   /* ── Radii ── */
   --r:   20px;

@@ -66,8 +66,8 @@ function ProjectCard({ project, index, onClick }) {
         borderRadius:'var(--rs)', border:'1px solid var(--border)',
       }}>
         {project.metrics.map(m => (
-          <div key={m.key} style={{ flex:1, textAlign:'center' }}>
-            <div style={{ fontFamily:'Syne,sans-serif', fontSize:'1.05rem', fontWeight:800, color:project.color, marginBottom:'.2rem' }}>{m.val}</div>
+          <div key={m.key} style={{ flex:1, textAlign:'center', fontFamily:'Arial, sans-serif' }}>
+            <div style={{ fontSize:'1.05rem', fontWeight:800, color:project.color, marginBottom:'.2rem' }}>{m.val}</div>
             <div style={{ fontSize:'.68rem', color:'var(--muted)' }}>{m.key}</div>
           </div>
         ))}
@@ -177,8 +177,8 @@ function Modal({ project, onClose }) {
 
         <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:'1rem', marginBottom:'1.5rem' }}>
           {project.metrics.map(m => (
-            <div key={m.key} className="glass" style={{ padding:'1rem', textAlign:'center', borderRadius:'var(--rs)' }}>
-              <div style={{ fontFamily:'Syne,sans-serif', fontSize:'1.4rem', fontWeight:800, color:project.color }}>{m.val}</div>
+            <div key={m.key} className="glass" style={{ padding:'1rem', textAlign:'center', borderRadius:'var(--rs)', fontFamily:'Arial, sans-serif' }}>
+              <div style={{ fontSize:'1.4rem', fontWeight:800, color:project.color }}>{m.val}</div>
               <div style={{ fontSize:'.78rem', color:'var(--muted)', marginTop:'.25rem' }}>{m.key}</div>
             </div>
           ))}
