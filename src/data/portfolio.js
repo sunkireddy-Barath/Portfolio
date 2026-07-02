@@ -8,7 +8,7 @@ export const ROLES = [
 ];
 
 export const STATS = [
-  { value: '850+', label: 'LeetCode Problems' },
+  { value: '950+', label: 'LeetCode Problems' },
   { value: '3',    label: 'Hackathon Wins' },
   { value: '500+', label: 'Day Streak' },
   { value: '5+',   label: 'OSS PRs Merged' },
@@ -68,7 +68,7 @@ export const INTERNSHIPS = [
   {
     company:  'L2M Labs',
     role:     'Software Development Intern',
-    period:   'Jan – Apr 2026',
+    period:   'Jan – Mar 2026',
     location: 'Chennai, India',
     color:    '#00ff88',
     color2:   '#00aa44',
@@ -222,10 +222,16 @@ export const SKILLS = [
     items: ['Node.js', 'Express.js', 'Flask', 'FastAPI', 'Ruby on Rails', 'PostgreSQL', 'MongoDB', 'MySQL', 'Supabase', 'Firebase'],
   },
   {
-    category: 'AI / ML',
+    category: 'Artificial Intelligence and Machine Learning',
     icon: '🤖',
     type: 'tags',
-    items: ['TensorFlow', 'PyTorch', 'Scikit-learn', 'NumPy', 'Pandas', 'Matplotlib', 'OpenCV'],
+    items: ['NumPy', 'Pandas', 'Scikit-learn', 'Matplotlib', 'TensorFlow', 'PyTorch', 'OpenCV', 'Keras'],
+  },
+  {
+    category: 'DevOps and Cloud',
+    icon: '☁️',
+    type: 'tags',
+    items: ['Git', 'GitHub', 'Docker', 'Jenkins', 'Linux', 'Shell Scripting', 'CI/CD', 'AWS (EC2, S3)'],
   },
   {
     category: 'CS Fundamentals',
@@ -236,6 +242,15 @@ export const SKILLS = [
 ];
 
 export const HACKATHONS = [
+  {
+    place:   '🥈',
+    name:    'Hack Karnataka',
+    project: 'Top 2 (Finalist)',
+    stats:   'State Level',
+    prize:   '',
+    color:   '#c0c0c0',
+    year:    '2024',
+  },
   {
     place:   '🥇',
     name:    'Cardano Asia × IBW Hackathon 2025',
@@ -273,11 +288,11 @@ export const CP = [
     color:    '#ffa500',
     link:     'https://leetcode.com/barath80',
     stats: [
-      { val: '850', key: 'Problems Solved', suffix: '+' },
-      { val: '1702', key: 'Max Rating', suffix: '' },
+      { val: '950', key: 'Problems Solved', suffix: '+' },
+      { val: '1790', key: 'Max Rating', suffix: '' },
       { val: '500', key: 'Day Streak', suffix: '+' },
     ],
-    badge: 'Top 13% Globally',
+    badge: 'Top 10% Globally',
     extra: 'Daily Streak • Contest Contender',
   },
   {
@@ -287,7 +302,7 @@ export const CP = [
     color:    '#7c5c3e',
     link:     'https://www.codechef.com/users/barath80',
     stats: [
-      { val: '192', key: 'Problems Solved', suffix: '+' },
+      { val: '222', key: 'Problems Solved', suffix: '+' },
       { val: '1183', key: 'Max Rating', suffix: '' },
     ],
     badge: 'Bronze & Gold Badges',
@@ -300,10 +315,10 @@ export const CP = [
     color:    '#1f8dd6',
     link:     'https://codeforces.com/profile/sunkireddybarath07',
     stats: [
-      { val: '363', key: 'Max Rating', suffix: '' },
+      { val: '706', key: 'Max Rating', suffix: '' },
       { val: '6', key: 'Weeks Active', suffix: '' },
     ],
-    badge: 'Newbie → Growing',
-    extra: 'Logic & Efficiency focus',
+    badge: 'Newbie',
+    extra: 'Enhancing Logic & Efficiency',
   },
 ];
